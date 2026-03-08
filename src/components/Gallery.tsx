@@ -237,7 +237,7 @@ export default function Gallery() {
           </div>
 
           {/* Grid */}
-          <motion.div layout className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {filtered.map((item, i) => (
               <motion.div
                 key={`${item.alt}-${i}`}
@@ -247,9 +247,9 @@ export default function Gallery() {
                 exit={{ opacity: 0, scale: 0.97 }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
                 className={`relative overflow-hidden rounded-card group cursor-pointer ${
-                  i === 0 ? "col-span-2 row-span-2" : ""
+                  i === 0 ? "sm:col-span-2 sm:row-span-2" : ""
                 }`}
-                style={{ aspectRatio: i === 0 ? "auto" : "4/3", minHeight: i === 0 ? 400 : 180 }}
+                style={{ aspectRatio: i === 0 ? "auto" : "4/3", minHeight: i === 0 ? 400 : 200 }}
                 onClick={() => setLightboxIndex(i)}
               >
                 {/* Wood frame on hover */}
@@ -260,7 +260,7 @@ export default function Gallery() {
                   alt={item.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
 
                 {/* Label overlay — white text on dark gradient */}
