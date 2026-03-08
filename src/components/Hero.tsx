@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 import heroImg from "@/img/sala-1.webp";
 
 const variants = {
@@ -67,6 +68,7 @@ export default function Hero() {
             <motion.div custom={4} initial="hidden" animate="show" variants={variants}
               className="flex flex-wrap gap-3">
               <a href="#contato"
+                onClick={() => track("agendar_visita", { origem: "hero" })}
                 className="inline-flex items-center px-7 py-3.5 rounded-button font-semibold text-text-on-accent bg-accent hover:bg-accent-hover border border-wood/50 transition-all duration-200 text-sm tracking-wide"
                 style={{ fontFamily: "var(--font-sans, 'DM Sans', sans-serif)" }}>
                 Agendar Visita

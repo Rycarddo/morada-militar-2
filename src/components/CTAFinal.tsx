@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 export default function CTAFinal() {
   return (
@@ -80,6 +81,7 @@ export default function CTAFinal() {
             href="https://wa.me/5592985478571?text=Ol%C3%A1!%20Quero%20agendar%20uma%20visita."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("agendar_visita", { origem: "cta_final" })}
             className="inline-flex items-center gap-3 px-10 py-4 rounded-button bg-text-primary text-accent font-bold text-base hover:scale-[1.03] transition-transform duration-200 shadow-float"
             style={{ fontFamily: "var(--font-sans, 'DM Sans', sans-serif)" }}
           >
