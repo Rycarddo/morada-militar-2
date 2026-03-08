@@ -36,9 +36,12 @@ export default function Nav() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-[1fr_auto_1fr] md:flex md:items-center md:justify-between items-center">
+          {/* Mobile left spacer / desktop: nothing (logo is first flex child) */}
+          <div className="md:hidden" />
+
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 select-none" onClick={close}>
+          <a href="#" className="flex items-center gap-3 select-none justify-self-center md:justify-self-auto" onClick={close}>
             <Image
               src={logoImg}
               alt="Logo Morada do Militar"
@@ -95,7 +98,7 @@ export default function Nav() {
 
           {/* Mobile hamburger / close */}
           <button
-            className="md:hidden flex flex-col justify-center items-center gap-1.5 p-2 w-10 h-10"
+            className="md:hidden flex flex-col justify-center items-center gap-1.5 p-2 w-10 h-10 justify-self-end"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             onClick={() => setMenuOpen((v) => !v)}
           >
