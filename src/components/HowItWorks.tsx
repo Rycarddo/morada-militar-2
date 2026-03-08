@@ -22,12 +22,15 @@ function IconDocument() {
   );
 }
 
-function IconKey() {
+function IconHome() {
   return (
     <svg viewBox="0 0 40 40" fill="none" className="w-7 h-7">
-      <circle cx="15" cy="16" r="8" stroke="currentColor" strokeWidth="1.75" />
-      <path d="M21 20l14 14" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-      <path d="M30 29l-4 4M34 27l-3 3" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+      {/* Roof */}
+      <path d="M5 19L20 7l15 12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Walls */}
+      <path d="M9 16v16h22V16" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Heart inside */}
+      <path d="M20 28c0 0-6-4-6-8a4 4 0 018 0 4 4 0 018 0c0 4-6 8-10 8z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -49,7 +52,7 @@ const steps = [
     roman: "III",
     title: "More",
     desc: "Receba as chaves e comece a escrever um novo capítulo. Sua família merece esse lar.",
-    Icon: IconKey,
+    Icon: IconHome,
   },
 ];
 
