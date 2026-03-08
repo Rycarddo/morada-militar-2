@@ -19,6 +19,11 @@ const contactInfo = [
     href: "https://instagram.com/moradadomilitar",
   },
   {
+    label: "Facebook  ",
+    value: "Morada do Militar",
+    href: "https://www.facebook.com/MoradadoMilitar/",
+  },
+  {
     label: "E-mail",
     value: "contato@moradadomilitar.com.br",
     href: "mailto:contato@moradadomilitar.com.br",
@@ -43,7 +48,7 @@ export default function Footer() {
                 alt="Morada do Militar"
                 width={140}
                 height={56}
-                className="object-contain h-12 w-auto"
+                className="object-contain h-36 w-auto"
               />
             </a>
             <p
@@ -76,6 +81,17 @@ export default function Footer() {
                 }}
               >
                 WhatsApp
+              </a>
+              <a
+                href="https://facebook.com/MoradadoMilitar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-muted text-xs hover:text-text-primary transition-colors duration-200 tracking-wide"
+                style={{
+                  fontFamily: "var(--font-sans, 'DM Sans', sans-serif)",
+                }}
+              >
+                Facebook
               </a>
             </div>
           </div>
