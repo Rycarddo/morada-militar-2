@@ -5,8 +5,7 @@ export default function CTAFinal() {
   return (
     <section
       id="contato"
-      className="relative bg-accent overflow-hidden"
-      style={{ paddingTop: 160, paddingBottom: 160 }}
+      className="relative bg-accent overflow-hidden py-20 md:py-28 lg:py-40"
     >
       {/* Noise grain in white */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-[1] opacity-[0.04]"

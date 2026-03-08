@@ -215,12 +215,12 @@ export default function Differentials() {
         >
           <div className="max-w-7xl mx-auto px-6">
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 min-h-[560px] ${diff.reverse ? "lg:[direction:rtl]" : ""}`}
+              className={`grid grid-cols-1 lg:grid-cols-2 ${diff.reverse ? "lg:[direction:rtl]" : ""}`}
             >
               {/* Visual side */}
               <div
                 className={`relative overflow-hidden ${diff.reverse ? "lg:[direction:ltr]" : ""}`}
-                style={{ minHeight: 400 }}
+                style={{ minHeight: 260 }}
               >
                 {diff.visual === "map" && <MapSVG />}
                 {diff.visual === "network" && <CommunityNetworkSVG />}
@@ -245,7 +245,7 @@ export default function Differentials() {
 
               {/* Text side */}
               <div
-                className={`flex flex-col justify-center py-16 ${
+                className={`flex flex-col justify-center py-10 lg:py-16 ${
                   diff.reverse ? "lg:[direction:ltr] lg:pr-16" : "lg:pl-16"
                 }`}
               >
@@ -330,7 +330,7 @@ export default function Differentials() {
 
                   {/* Finishes grid */}
                   {diff.finishes && (
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {diff.finishes.map((f) => (
                         <div
                           key={f.label}

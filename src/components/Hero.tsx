@@ -24,7 +24,7 @@ export default function Hero() {
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }} />
 
       <div className="max-w-7xl mx-auto px-6 w-full pt-24 pb-16 z-10 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-[48fr_52fr] gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[48fr_52fr] gap-8 lg:gap-16 items-center">
 
           {/* LEFT */}
           <div className="flex flex-col gap-7">
@@ -76,7 +76,7 @@ export default function Hero() {
 
           {/* RIGHT — Photo with wood frame */}
           <motion.div custom={5} initial="hidden" animate="show" variants={variants}
-            className="relative h-[500px] lg:h-[620px]">
+            className="relative h-75 sm:h-100 lg:h-155">
             {/* Outer wood frame */}
             <div className="absolute inset-0 rounded-card border border-wood-border" style={{ margin: "-6px" }} />
             {/* Photo container */}

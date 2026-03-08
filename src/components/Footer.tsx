@@ -2,8 +2,6 @@ const navLinks = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Apartamento", href: "#apartamento" },
   { label: "Como Funciona", href: "#como-funciona" },
-  ,
-  ,
 ];
 
 const contactInfo = [

@@ -190,7 +190,7 @@ export default function Gallery() {
     <>
       <section
         id="apartamento"
-        className="bg-surface-alt py-28 border-t border-border-wood overflow-hidden"
+        className="bg-surface-alt py-16 md:py-28 border-t border-border-wood overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
