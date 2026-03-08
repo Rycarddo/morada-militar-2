@@ -1,3 +1,6 @@
+import Image from "next/image";
+import logoImg from "@/img/logo.png";
+
 const navLinks = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Apartamento", href: "#apartamento" },
@@ -15,6 +18,11 @@ const contactInfo = [
     value: "@moradadomilitar",
     href: "https://instagram.com/moradadomilitar",
   },
+  {
+    label: "E-mail",
+    value: "contato@moradadomilitar.com.br",
+    href: "mailto:contato@moradadomilitar.com.br",
+  },
 ];
 
 const addressInfo = ["Rua 55, 189 — Japiim", "Manaus — AM", "CEP 69077-560"];
@@ -29,16 +37,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
           {/* Col 1 — Brand */}
           <div className="lg:col-span-1">
-            <a
-              href="#"
-              className="font-display font-bold text-text-primary block mb-3"
-              style={{
-                fontFamily: "var(--font-playfair, 'Playfair Display', serif)",
-                fontSize: "clamp(18px, 1.4vw, 22px)",
-                letterSpacing: "0.05em",
-              }}
-            >
-              MORADA DO MILITAR
+            <a href="#" className="inline-block mb-4">
+              <Image
+                src={logoImg}
+                alt="Morada do Militar"
+                width={140}
+                height={56}
+                className="object-contain h-12 w-auto"
+              />
             </a>
             <p
               className="text-text-muted text-sm leading-relaxed mb-6 max-w-[220px]"
