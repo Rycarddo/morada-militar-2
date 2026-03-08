@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { track } from "@vercel/analytics";
 import heroImg from "@/img/sala-1.webp";
+import logoImg from "@/img/logo.png";
 
 const variants = {
   hidden: { opacity: 0, y: 28 },
@@ -29,14 +30,17 @@ export default function Hero() {
 
           {/* LEFT */}
           <div className="flex flex-col gap-7">
-            {/* Eyebrow */}
+            {/* Eyebrow — Logo */}
             <motion.div custom={0} initial="hidden" animate="show" variants={variants}
-              className="flex items-center gap-3">
-              <div className="h-px w-8 bg-wood-border" />
-              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-text-muted"
-                style={{ fontFamily: "var(--font-sans, 'DM Sans', sans-serif)" }}>
-                Morada do Militar · Manaus
-              </span>
+              className="flex justify-center">
+              <Image
+                src={logoImg}
+                alt="Morada do Militar"
+                width={360}
+                height={144}
+                className="object-contain h-32 w-auto"
+                priority
+              />
             </motion.div>
 
             {/* Headline */}
