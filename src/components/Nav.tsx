@@ -41,34 +41,14 @@ export default function Nav() {
           <div className="md:hidden" />
 
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 select-none justify-self-center md:justify-self-auto" onClick={close}>
+          <a href="#" className="flex items-center select-none justify-self-center md:justify-self-auto" onClick={close}>
             <Image
               src={logoImg}
               alt="Logo Morada do Militar"
-              width={36}
-              height={36}
-              className="object-contain"
+              width={120}
+              height={48}
+              className="object-contain h-10 w-auto"
             />
-            <div className="flex flex-col items-center leading-[1.1]">
-              <span
-                className="font-bold text-text-primary uppercase tracking-widest text-sm"
-                style={{ fontFamily: "var(--font-playfair, 'Playfair Display', serif)" }}
-              >
-                Morada
-              </span>
-              <span
-                className="font-bold text-gold uppercase tracking-widest text-sm italic"
-                style={{ fontFamily: "var(--font-playfair, 'Playfair Display', serif)" }}
-              >
-                Do
-              </span>
-              <span
-                className="font-bold text-text-primary uppercase tracking-widest text-sm"
-                style={{ fontFamily: "var(--font-playfair, 'Playfair Display', serif)" }}
-              >
-                Militar
-              </span>
-            </div>
           </a>
 
           {/* Desktop Links */}
